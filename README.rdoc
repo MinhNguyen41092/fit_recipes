@@ -1,22 +1,9 @@
-testing specs for recipes:
-name: string
-summary: text
-description: text
+Authentication updates:
 
-- name must be present
-- name must be between 5 characters and less than 100 characters
-- summary must be present
-- summary must be between 10 characters and less than 150 characters
-- description must be present
-- description must be between 20 characters and less than 200 characters
-- chef_id must be present
-
-testing specs for chefs:
-name: string
-email: string
-
-- chefname must be present
-- chefname must be between 3 characters and less than 40 characters
-- email must be present
-- email must be unique (used for login)
-- email must be valid
+1) Show recipe page -> Ability to edit/update only own recipe
+2) Navigation partial -> Toggle Menu, restrict new 
+3) Restrict thumbs up and thumbs down action to logged_in users only
+4) Recipe - update to current_user
+5) Like - update to current_user
+6) Before_action: require_user, except: [:show, :index]
+7) Before_action: require_same_user for chefs, only: [:edit, :update]
