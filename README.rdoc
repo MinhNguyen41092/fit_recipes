@@ -1,1 +1,11 @@
-- Add Admin functionality
+Thing you'll need:
+
+1. Migration to create review table, body, type = text_field, 2 foreign keys, reference chef_id, reference recipe_id
+2. Build the Review model
+3. Create tests for the spec, add validations.
+4. Build associations, has_many and belongs_to.
+5. Test out associations in console.
+6. Create routes.
+7. Authenticated chefs can create reviews, before_action require_user.
+8. Associate chef_id and recipe_id.
+9. Use existing code if possible. 

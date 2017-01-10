@@ -24,4 +24,21 @@ class ApplicationController < ActionController::Base
       redirect_to recipes_path
     end
   end
+  
+  def current_recipe
+    
+    @current_recipe = Recipe.find_by_id(session[:current_recipe_id])
+  end
+  
+  def recipe?
+    !!current_recipe
+  end
+  
+  def require_recipe
+    if !recipe?
+      flash[:danger] = "You have to choose a recipe to perform that action"
+      redirect_to recipes_path
+    end
+  end
 end
+

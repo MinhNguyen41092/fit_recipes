@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
   end
   
   def show
-    
+    session[:current_recipe_id] = @recipe.id
   end
   
   def new

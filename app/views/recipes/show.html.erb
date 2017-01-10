@@ -38,6 +38,9 @@
         <% end %>
       </div>
     </div>
+    <% if logged_in? and (@recipe.chef == current_user || current_user.admin? ) and @recipe %>
+      <%= link_to "Write a Review", new_review_path(@review), class: "btn btn-success pull-right" %>
+    <% end %>
   </div>
 </div>
 
